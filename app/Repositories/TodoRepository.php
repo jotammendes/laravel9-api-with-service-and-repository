@@ -2,6 +2,8 @@
 
 namespace App\Repositories;
 
+use App\Models\Todo;
+
 class TodoRepository
 {
     protected $entity;
