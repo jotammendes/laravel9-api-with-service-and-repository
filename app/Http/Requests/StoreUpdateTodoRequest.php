@@ -13,7 +13,7 @@ class StoreUpdateTodoRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class StoreUpdateTodoRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => ['required', 'string', 'min:3', 'max:255'],
+            'description' => ['nullable', 'string', 'min:3', 'max:9999'],
+            'completed' => ['required', 'boolean'],
         ];
     }
 }
