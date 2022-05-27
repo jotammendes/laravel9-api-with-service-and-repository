@@ -66,7 +66,7 @@ class TodoController extends Controller
 
         return response()->json([
             'updated' => true,
-        ]);
+        ], 201);
     }
 
     /**
